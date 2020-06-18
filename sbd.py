@@ -171,7 +171,7 @@ def get_data(files, expect_labels=True, tokenize=False, verbose=False, files_alr
         frag.ends_seg = True
         frag_index += 1
 
-    if verbose: sys.stderr.write(' words [%d] sbd hyps [%d]\n' %(word_index, frag_index))
+    if verbose: sys.stderr.write(' words {:d} sbd hyps {:d}\n'.format(word_index, frag_index))
 
     ## create a Doc object to hold all this information
     doc = Doc(frag_list)
@@ -241,7 +241,7 @@ def get_text_data(text, expect_labels=True, tokenize=False, verbose=False):
     frag.ends_seg = True
     frag_index += 1
         
-    if verbose: sys.stderr.write(' words [%d] sbd hyps [%d]\n' %(word_index, frag_index))
+    if verbose: sys.stderr.write(' words {:d} sbd hyps {:d}\n'.format(word_index, frag_index))
 
     ## create a Doc object to hold all this information
     doc = Doc(frag_list)
@@ -474,8 +474,7 @@ class Doc:
                     if not word.endswith('.'): non_abbrs[word] += 1
             frag = frag.next
 
-        if verbose: sys.stderr.write('lowercased [%d] non-abbrs [%d]\n'
-                                     %(len(lower_words), len(non_abbrs)))
+        if verbose: sys.stderr.write('lowercased {:d} non-abbrs {:d}\n'.format(len(lower_words), len(non_abbrs)))
 
         return lower_words, non_abbrs
 
