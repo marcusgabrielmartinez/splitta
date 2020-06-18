@@ -525,12 +525,12 @@ class Doc:
                 if frag.next: w2 = ' '.join(frag.next.tokenized.split()[:2])
                 else: w2 = '<EOF>'
                 if verbose:
-                    print '[%d] [%1.4f] %s?? %s' %(frag.label, frag.pred, w1, w2)
+                    print('{:d} {:1.4f} {:s}?? {:s}'.format(frag.label, frag.pred, w1, w2))
 
             frag = frag.next
 
         error = 1 - (1.0 * correct / total)
-        print 'correct [%d] total [%d] error [%1.4f]' %(correct, total, error)
+        print('correct {:d} total {:d} error {:1.4f}'.format(correct, total, error))
         
 class Frag:
     """
