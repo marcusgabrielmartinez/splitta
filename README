@@ -1,3 +1,6 @@
+NOTE: This code has been modified to work with Python3, and has been tested only with Python 3.7.4. String formatting for some of the print statements has not been tested, but should work, and if not should work with minimal fixing.
+These modifications have only been tested with the system being run in command line and imported as a module with the provided NB model.
+
 Improved Sentence Boundary Detection
 
 Dan Gillick
